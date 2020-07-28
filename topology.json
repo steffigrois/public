@@ -82,7 +82,18 @@
 				"minimumActivationTime": "PT30S",
 				"maximumActivationTime": "PT30S"
 			}
-		],
+    ,
+    {
+      "@type": "#Microsoft.Media.MediaGraphFrameRateFilterProcessor",
+      "name": "frameRateFilter",
+      "maximumFps": "1.0",
+      "inputs": [
+        {
+          "nodeName": "signalGateProcessor"
+        }
+      ]
+    }
+  ],
 		"sinks": [
 			
 			{
