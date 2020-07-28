@@ -158,7 +158,17 @@
 		  ]
 		}
 	  ],
-	  "sinks": [  
+	  "sinks": [ 
+		{
+			"@type": "#Microsoft.Media.MediaGraphIoTHubMessageSink",
+			"name": "hubSink",
+			"hubOutputName": "${hubSinkOutputName}",
+			"inputs": [
+			  {
+				"nodeName": "httpExtension"
+			  }
+			]
+		  }, 
 		{
 			"@type": "#Microsoft.Media.MediaGraphFileSink",
 			"name": "fileSink",
