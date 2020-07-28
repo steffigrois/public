@@ -32,7 +32,13 @@
 				"type": "String",
 				"description": "hub sink output name",
 				"default": "inferenceOutput"
-			}
+      },
+      {
+        "name": "fileSinkOutputName",
+        "type": "String",
+        "description": "file sink output name",
+        "default": "filesinkOutput"
+    }
 		],
 		"sources": [
 			{
