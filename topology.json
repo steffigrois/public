@@ -168,7 +168,20 @@
 				"nodeName": "httpExtension"
 			  }
 			]
-		  }, 
+		  },
+		  {
+			"@type": "#Microsoft.Media.MediaGraphAssetSink",
+			"name": "assetSink",
+			"assetNamePattern": "hackathonFromEVR-LVAEdge-${System.DateTime}",
+			"segmentLength": "PT30S",
+			"LocalMediaCacheMaximumSizeMiB": "2048",
+			"localMediaCachePath": "/var/lib/azuremediaservices/tmp/",
+			"inputs": [
+			  {
+				"nodeName": "signalGateProcessor"
+			  }
+			]
+		  },  
 		{
 			"@type": "#Microsoft.Media.MediaGraphFileSink",
 			"name": "fileSink",
