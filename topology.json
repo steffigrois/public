@@ -100,7 +100,7 @@
 				"hubOutputName": "${hubSinkOutputName}",
 				"inputs": [
 					{
-						"nodeName": "frameRateFilter"
+						"nodeName": "motionDetection"
 					}
 				]
 			},
