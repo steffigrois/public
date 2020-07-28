@@ -32,13 +32,13 @@
 				"type": "String",
 				"description": "hub sink output name",
 				"default": "inferenceOutput"
-      },
-      {
-        "name": "fileSinkOutputName",
-        "type": "String",
-        "description": "file sink output name",
-        "default": "filesinkOutput"
-    }
+			},
+			{
+				"name": "fileSinkOutputName",
+				"type": "String",
+				"description": "file sink output name",
+				"default": "filesinkOutput"
+			}
 		],
 		"sources": [
 			{
@@ -81,32 +81,30 @@
 				"activationSignalOffset": "PT0S",
 				"minimumActivationTime": "PT30S",
 				"maximumActivationTime": "PT30S"
+			},
+			{
+				"@type": "#Microsoft.Media.MediaGraphFrameRateFilterProcessor",
+				"name": "frameRateFilter",
+				"maximumFps": "1.0",
+				"inputs": [
+					{
+						"nodeName": "signalGateProcessor"
+					}
+				]
 			}
-    ,
-    {
-      "@type": "#Microsoft.Media.MediaGraphFrameRateFilterProcessor",
-      "name": "frameRateFilter",
-      "maximumFps": "1.0",
-      "inputs": [
-        {
-          "nodeName": "signalGateProcessor"
-        }
-      ]
-    }
-  ],
+		],
 		"sinks": [
-			
 			{
 				"@type": "#Microsoft.Media.MediaGraphIoTHubMessageSink",
 				"name": "hubSink",
 				"hubOutputName": "${hubSinkOutputName}",
 				"inputs": [
 					{
-						"nodeName": "motionDetection"
+						"nodeName": "frameRateFilter"
 					}
 				]
-            },
-            {
+			},
+			{
 				"@type": "#Microsoft.Media.MediaGraphFileSink",
 				"name": "fileSink",
 				"inputs": [
