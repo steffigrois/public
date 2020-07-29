@@ -67,7 +67,7 @@
 				"name": "frameRate",
 				"type": "String",
 				"description": "Rate of the frames per second to be received from LVA.",
-				"default": "2"
+				"default": "1"
 			},
 			{
 				"name": "hubSourceInput",
@@ -110,6 +110,7 @@
 			{
 				"@type": "#Microsoft.Media.MediaGraphFrameRateFilterProcessor",
 				"name": "frameRateFilter",
+				
 				"inputs": [
 					{
 						"nodeName": "motionDetection"
@@ -129,7 +130,7 @@
 					}
 				],
 				"activationEvaluationWindow": "PT1S",
-				"activationSignalOffset": "PT0S",
+				"activationSignalOffset": "-PT5S",
 				"minimumActivationTime": "PT30S",
 				"maximumActivationTime": "PT30S"
 			},
