@@ -25,7 +25,7 @@
 				"name": "motionSensitivity",
 				"type": "String",
 				"description": "motion detection sensitivity",
-				"default": "medium"
+				"default": "low"
 			},
 			{
 				"name": "httpAIServerAddress",
@@ -67,7 +67,7 @@
 				"name": "frameRate",
 				"type": "String",
 				"description": "Rate of the frames per second to be received from LVA.",
-				"default": "1"
+				"default": "1.0"
 			},
 			{
 				"name": "hubSourceInput",
@@ -180,7 +180,7 @@
 				"name": "assetSink",
 				"assetNamePattern": "hackathonFromEVR-LVAEdge-${System.DateTime}",
 				"segmentLength": "PT30S",
-				"LocalMediaCacheMaximumSizeMiB": "2048",
+				"LocalMediaCacheMaximumSizeMiB": "256",
 				"localMediaCachePath": "/var/lib/azuremediaservices/tmp/",
 				"inputs": [
 					{
