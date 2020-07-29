@@ -122,6 +122,9 @@
 				"name": "signalGateProcessor",
 				"inputs": [
 					{
+						"nodeName": "iotMessageSource"
+					},
+					{
 						"nodeName": "rtspSource"
 					}
 				],
